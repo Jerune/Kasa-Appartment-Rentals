@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Wrapper } from './components/Wrapper/Wrapper';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
 import "./style/main.css";
@@ -12,9 +17,12 @@ import "./style/main.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Wrapper>
       <Header />
-    </Wrapper>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+        </Routes>
+      </BrowserRouter>
     <Footer />
   </React.StrictMode>
 );

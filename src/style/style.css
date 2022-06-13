@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.test {
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*# sourceMappingURL=style.css.map */

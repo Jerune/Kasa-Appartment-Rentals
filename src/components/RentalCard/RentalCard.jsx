@@ -6,7 +6,7 @@ const backgroundStyles = {
 export default function RentalCard(){
     return(
         <div className="rental-card" style={backgroundStyles}>
-            <h2>test</h2>
+            <h2>This is a very long title to test how it renders, It renders beautifully</h2>
         </div>
     )
 }

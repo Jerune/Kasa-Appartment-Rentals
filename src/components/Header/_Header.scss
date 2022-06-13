@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 148px;
+    img {
+        height: 68px;
+        max-width: 220px;
+    } 
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 250px;
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+} 

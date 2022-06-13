@@ -21,3 +21,14 @@
         font-weight: 400;
     }
 }
+
+.rental-overview{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 43px 0;
+    padding: 56px 50px 6px 50px;
+    background-color: $color-secondary;
+    border-radius: 25px;
+}

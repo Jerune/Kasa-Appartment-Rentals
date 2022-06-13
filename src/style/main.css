@@ -69,4 +69,29 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.footer {
+  background: black;
+  color: white;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 66px 20px 30px 20px;
+}
+
+.footer img {
+  max-height: 40px;
+}
+
+.footer .copyright {
+  padding-top: 35px;
+}
 /*# sourceMappingURL=main.css.map */

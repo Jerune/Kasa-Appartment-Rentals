@@ -1,0 +1,23 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-primary;
+    h1{
+        font-size: 18rem;
+        font-weight: 700;
+        margin-top: 80px;
+    }
+    h2{
+        font-size: 2.25rem;
+        font-weight: 500;
+        margin-top: 25px;
+    }
+    a {
+        text-decoration: underline;
+        font-size: 1.125rem ;
+        font-weight: 500;
+        margin: 190px 0 160px 0;
+    }
+}

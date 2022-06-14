@@ -230,4 +230,40 @@ h1, h2, h3, p {
   width: 100%;
   max-width: 1023px;
 }
+
+.not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #FF6060;
+}
+
+.not-found h1 {
+  font-size: 18rem;
+  font-weight: 700;
+  margin-top: 80px;
+}
+
+.not-found h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+.not-found a {
+  text-decoration: underline;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 190px 0 160px 0;
+}
 /*# sourceMappingURL=main.css.map */

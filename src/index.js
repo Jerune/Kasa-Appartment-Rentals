@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Rentals from './pages/Rentals/Rentals';
+import NotFound from './pages/404/404';
 // Styles
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
@@ -26,6 +27,7 @@ root.render(
           <Route index element={<Home />}/>
           <Route path='about' element={<About/>}/>
           <Route path='rentals' element={<Rentals/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     <Footer />

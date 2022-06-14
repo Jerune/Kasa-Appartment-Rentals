@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
@@ -6,6 +7,7 @@ import Gallery from "../../components/Gallery/Gallery";
 import DefaultImage from '../../assets/rentals/profile-picture-default.jpg';
 
 export default function Rentals(){
+    let params = useParams();
     return(
         <main className="main rentals">
             <Gallery />

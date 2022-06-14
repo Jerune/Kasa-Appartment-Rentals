@@ -11,7 +11,8 @@
         "../components/RentalCard/_RentalCard.scss",
         "../components/InfoDropdown/_InfoDropdown.scss",
         "../pages/Home/_Home.scss",
-        "../pages/About/_About.scss"
+        "../pages/About/_About.scss",
+        "../pages/Rentals/_Rentals.scss"
     ],
     "names": [],
     "file": "main.css"

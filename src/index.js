@@ -1,3 +1,4 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -5,10 +6,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+// Pages
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Rentals from './pages/Rentals/Rentals';
+// Styles
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
 import "./style/main.css";
@@ -20,7 +24,8 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />}/>
-          <Route path='a-propos' element={<About/>}/>
+          <Route path='about' element={<About/>}/>
+          <Route path='rentals' element={<Rentals/>}/>
         </Routes>
       </BrowserRouter>
     <Footer />

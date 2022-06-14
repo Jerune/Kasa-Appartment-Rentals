@@ -4,7 +4,7 @@ import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
 export default function About(){
     return(
         <main className="main">
-            <HeroBanner />
+            <HeroBanner page='About'/>
             <section className="strengths">
                 <InfoDropdown />
                 <InfoDropdown />

@@ -1,17 +1,30 @@
 .rental-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     width: 340px;
     height: 340px;
-    padding: 20px;
     margin-bottom: 50px;
-    background: $color-primary linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    img{
+        height: 100%;
+        object-fit: contain;
+    }
+    .gradient-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    }
     h2{
         max-width: 100%;
         font-size: 1.125rem;
-        font-weight: 500;
         color: white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
     }
 }

@@ -7,7 +7,6 @@ export default function InfoDropdown(props){
 
     function ToggleDropdown(state){
         state === 'open' ? setDropdownState('closed') : setDropdownState('open');
-        console.log(dropdownState);
     }
 
     return(

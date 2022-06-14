@@ -1,12 +1,18 @@
-const backgroundStyles = {
-    background:
-          "center cover no-repeat url(https://i.picsum.photos/id/219/200/300.jpg?hmac=RGnJfbO2380zLCFSj2tm_q0vW0wtw67d0fhWHX2IoDk)"
-}
+import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 
-export default function RentalCard(){
+export default function RentalCard({picture, title, id}){
+    let navigate = useNavigate();
     return(
-        <div className="rental-card" style={backgroundStyles}>
-            <h2>This is a very long title to test how it renders, It renders beautifully</h2>
+        <div onClick={() => navigate(`/rentals:${id}`)} className="rental-card">
+            <img src={picture} alt={title} />
+            <div className='gradient-container'></div>
+            <h2>{title}</h2>
         </div>
     )
+}
+
+RentalCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
 }

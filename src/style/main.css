@@ -140,7 +140,7 @@ h1, h2, h3, p {
 }
 
 .info-dropdown {
-  max-width: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +226,7 @@ h1, h2, h3, p {
 
 .strengths {
   margin: 33px 0;
+  width: 100%;
   max-width: 1023px;
 }
 /*# sourceMappingURL=main.css.map */

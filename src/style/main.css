@@ -68,6 +68,12 @@ ul {
   color: #FF6060;
 }
 
+.header nav a:hover,
+.header nav a:focus,
+.header nav a:active {
+  text-decoration: underline;
+}
+
 .footer {
   background: black;
   color: white;
@@ -393,6 +399,7 @@ ul {
 .rentals_detailInfo > * {
   width: 47%;
   margin-top: 0;
+  font-size: 1.125rem;
 }
 
 .not-found {

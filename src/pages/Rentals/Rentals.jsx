@@ -21,7 +21,7 @@ export default function Rentals(){
                 </div>
                 <div className="rentals_ownerRating">
                     <div className="rentals_ownerRating_owner">
-                        <h3>Alexandre Dumas</h3>
+                        <h3>Alexandre<br/>Dumas</h3>
                         <img src={DefaultImage} alt="Default Profile Picture" />
                     </div>
                     <ul className="rentals_ownerRating_rating">

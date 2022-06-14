@@ -17,5 +17,10 @@
         width: 250px;
         font-size: 1.5rem;
         color: $color-primary;
+        a:hover,
+        a:focus,
+        a:active{
+            text-decoration: underline;
+        }
     }
 } 

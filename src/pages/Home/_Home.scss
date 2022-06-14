@@ -6,22 +6,6 @@
     margin: 0 auto;
 }
 
-.hero-banner{
-    background: no-repeat left url(http://localhost:3000/hero-banner-background.jpg);
-    border-radius: 25px;
-    width: 100%;
-    height: 224px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1{
-        font-size: 3rem;
-        color: white;
-        font-weight: 400;
-    }
-}
-
 .rental-overview{
     display: flex;
     flex-direction: row;

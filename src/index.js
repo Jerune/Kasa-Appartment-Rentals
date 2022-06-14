@@ -8,11 +8,10 @@ import {
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
 import "./style/main.css";
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +19,8 @@ root.render(
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route index element={<Home />}/>
+          <Route path='a-propos' element={<About/>}/>
         </Routes>
       </BrowserRouter>
     <Footer />

@@ -4,7 +4,7 @@ import RentalCard from "../../components/RentalCard/RentalCard";
 export default function Home(){
     return(
         <main className="main">
-            <HeroBanner />
+            <HeroBanner page='Home'/>
             <section className="rental-overview">
                 <RentalCard />
                 <RentalCard />

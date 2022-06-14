@@ -1,0 +1,31 @@
+.gallery{
+    width: 100%;
+    height: 415px;
+    max-height: 415px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    color: white;
+    font-size: 5.3rem;
+    margin-bottom: 30px;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .left{
+        position: absolute;
+        left: 25px;
+        top: 36%;
+    }
+    .right{
+        position: absolute;
+        right: 25px;
+        top: 36%;
+    }
+    .photo-index{
+        position: absolute;
+        right: 48%;
+        bottom: 25px;
+        font-size: 1.125rem;
+    }
+}

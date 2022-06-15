@@ -6,7 +6,7 @@ import { StoreContext } from '../../providers/Store';
 
 export default function Home(){
     // @ts-ignore
-    const [store, updateStore] = useContext(StoreContext);
+    const [store] = useContext(StoreContext);
     if(store.logements.length=== 0) getAllData();
 
     return(

@@ -1,18 +1,17 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getAllData } from '../../services/dataManager';
 import { StoreContext } from '../../providers/Store';
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
 import Gallery from "../../components/Gallery/Gallery";
-import DefaultImage from '../../assets/rentals/profile-picture-default.jpg';
 import Rating from '../../components/Rating/Rating';
 let selectedRental = {};
 
 export default function Rentals(){
     // @ts-ignore
-    const [store, updateStore] = useContext(StoreContext);
+    const [store] = useContext(StoreContext);
     if(store.logements.length=== 0) getAllData();
-    let params = 'c67ab8a7';  
+    let params = useParams();  
     
     if(store.logements.length > 1){
         selectedRental = store.logements.filter(logement => logement.id === params)

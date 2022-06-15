@@ -1,12 +1,11 @@
 import { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { getAllData } from '../../services/dataManager';
 import { StoreContext } from '../../providers/Store';
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
 import Gallery from "../../components/Gallery/Gallery";
 import DefaultImage from '../../assets/rentals/profile-picture-default.jpg';
+import Rating from '../../components/Rating/Rating';
 let selectedRental = {};
 
 export default function Rentals(){
@@ -17,18 +16,6 @@ export default function Rentals(){
     
     if(store.logements.length > 1){
         selectedRental = store.logements.filter(logement => logement.id === params)
-
-        function calculateRating(){
-            const ratingNumber = selectedRental[0].rating;
-            let ratingArray = []
-            for (let i = 0; ratingNumber > i; i++){
-                ratingArray.push(<li><FontAwesomeIcon icon={faStar} /></li>)
-            }
-            for (let i = 5; ratingNumber < i; i--){
-                ratingArray.push(<li className='empty'><FontAwesomeIcon icon={faStar} /></li>)
-            }
-            return ratingArray;
-        }
 
     return(
         <main className="main rentals">
@@ -47,7 +34,7 @@ export default function Rentals(){
                         <img src={selectedRental[0].host.picture} alt={selectedRental[0].host.name} />
                     </div>
                     <ul className="rentals_ownerRating_rating">
-                        {calculateRating()}
+                        <Rating amountOfStars={selectedRental[0].rating}/>
                     </ul>
                 </div>
             </div>

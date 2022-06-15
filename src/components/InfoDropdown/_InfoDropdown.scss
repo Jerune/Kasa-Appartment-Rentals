@@ -28,6 +28,12 @@
         color: $color-primary;
         font-size: 1.5rem;
         font-weight: 400;
+        &.rental-size{
+            font-size: 1.125rem;
+        }
+        span{
+            display: block;
+        }
 
     }
 }

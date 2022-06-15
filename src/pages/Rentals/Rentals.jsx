@@ -25,7 +25,7 @@ export default function Rentals(){
                     <h1>{selectedRental[0].title}</h1>
                     <h3>{selectedRental[0].location}</h3>
                     <ul className="rentals_generalInfo_tags">
-                        {selectedRental[0].tags.map((tag) => <li>{tag}</li>)}
+                        {selectedRental[0].tags.map((tag) => <li key={tag}>{tag}</li>)}
                     </ul>
                 </div>
                 <div className="rentals_ownerRating">
@@ -39,8 +39,8 @@ export default function Rentals(){
                 </div>
             </div>
             <section className='rentals_detailInfo'>
-                <InfoDropdown />
-                <InfoDropdown />
+                <InfoDropdown type="rentals" title="Description" content={selectedRental[0].description}/>
+                <InfoDropdown type="rentals" title="Equipments" content={selectedRental[0].equipments}/>
             </section>
         </main>
     )

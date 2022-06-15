@@ -27,8 +27,8 @@ root.render(
       <StoreProvider>
         <Routes>
           <Route index element={<Home />}/>
-          <Route path='about' element={<About/>}/>
-          <Route path='rentals' element={<Rentals/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/rentals' element={<Rentals/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </StoreProvider>

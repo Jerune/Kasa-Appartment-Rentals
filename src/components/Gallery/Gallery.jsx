@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import DefaultImage from '../../assets/rentals/background_default.jpg';
 
-export default function Gallery(){
+export default function Gallery({id}){
   return (
     <header className='gallery'>
         <img src={DefaultImage} alt='Default Image' />

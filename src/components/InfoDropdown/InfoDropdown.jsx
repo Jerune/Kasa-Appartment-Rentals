@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
-export default function InfoDropdown({type, title, content}){
-    const [dropdownState, setDropdownState] = useState('closed');
+export default function InfoDropdown({state, type, title, content}){
+    const [dropdownState, setDropdownState] = useState(state);
 
-    function ToggleDropdown(state){
-        state === 'open' ? setDropdownState('closed') : setDropdownState('open');
+    function ToggleDropdown(status){
+        status === 'open' ? setDropdownState('closed') : setDropdownState('open');
     }
 
     return(

@@ -14,11 +14,11 @@ export default function Rentals(){
     let params = useParams();  
     
     if(store.logements.length > 1){
-        selectedRental = store.logements.filter(logement => logement.id === params)
+        selectedRental = store.logements.filter(logement => logement.id === params.rentalId)
 
     return(
         <main className="main rentals">
-            <Gallery id={params} />
+            <Gallery data={selectedRental} />
             <div className='rentals_generalInfo'>
                 <div className="rentals_nameLocationTags">
                     <h1>{selectedRental[0].title}</h1>
@@ -38,8 +38,8 @@ export default function Rentals(){
                 </div>
             </div>
             <section className='rentals_detailInfo'>
-                <InfoDropdown type="rentals" title="Description" content={selectedRental[0].description}/>
-                <InfoDropdown type="rentals" title="Equipments" content={selectedRental[0].equipments}/>
+                <InfoDropdown state="open" type="rentals" title="Description" content={selectedRental[0].description}/>
+                <InfoDropdown state="open" type="rentals" title="Equipments" content={selectedRental[0].equipments}/>
             </section>
         </main>
     )

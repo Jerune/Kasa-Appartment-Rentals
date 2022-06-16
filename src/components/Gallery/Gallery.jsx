@@ -5,8 +5,6 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 export default function Gallery({data}){
   const imageArray = data[0].pictures;
   const amountOfImages = imageArray.length;
-  console.log(amountOfImages);
-  
   const [activeImage, updateImage] = useState({url : imageArray[0], index: 0})
   
   function toggleImage(direction){

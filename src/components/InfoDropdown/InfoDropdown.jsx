@@ -18,7 +18,7 @@ export default function InfoDropdown({state, type, title, content}){
             </div>
             {dropdownState==='open' ? 
                 type==='rentals' ? 
-                    content.length === 5 ? 
+                    typeof(content) === 'object' ? 
                     <p className='rental-size'>
                         {content.map((element, index) => {
                         return(<span key={index}>{element}</span>)

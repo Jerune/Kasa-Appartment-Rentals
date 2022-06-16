@@ -4,8 +4,13 @@
     justify-content: space-between;
     align-items: center;
     height: 148px;
-    max-width: 1240px;
+    max-width: 1440px;
+    padding: 0 100px;
     margin: 0 auto;
+    @include responsive(1030px){
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     img {
         height: 68px;
         max-width: 220px;
@@ -18,8 +23,7 @@
         font-size: 1.5rem;
         color: $color-primary;
         a:hover,
-        a:focus,
-        a:active{
+        a.current{
             text-decoration: underline;
         }
     }

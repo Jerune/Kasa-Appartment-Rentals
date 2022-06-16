@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1240px;
+    max-width: 1440px;
+    padding: 0 100px;
     margin: 0 auto;
+    @include responsive(1030px){
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 .rental-overview{
@@ -12,7 +17,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 43px 0;
-    padding: 56px 50px 6px 50px;
+    padding: 50px 45px 5px 45px;
     background-color: $color-secondary;
     border-radius: 25px;
+    @include responsive(900px){
+        padding: 0;
+        background-color: white;
+    }
+    @include responsive(777px){
+        margin: 20px 0;
+    }
 }

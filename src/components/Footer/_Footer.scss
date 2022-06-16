@@ -6,6 +6,10 @@
     flex-direction: column;
     align-items: center;
     padding: 66px 20px 30px 20px;
+    @include responsive(777px){
+        font-size: 0.75rem;
+        padding-bottom: 53px;
+    }
     img{
         max-height: 40px;
     }

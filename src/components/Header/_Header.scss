@@ -3,25 +3,38 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 148px;
     max-width: 1440px;
-    padding: 0 100px;
+    padding: 40px 100px 63px 100px;
     margin: 0 auto;
     @include responsive(1030px){
         padding-left: 5%;
         padding-right: 5%;
     }
+    @include responsive(777px){
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+
     img {
         height: 68px;
-        max-width: 220px;
+        @include responsive(777px){
+            height: 47px;
+        }
     } 
     nav{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 250px;
+        justify-content: flex-end ;
         font-size: 1.5rem;
         color: $color-primary;
+        a{
+            margin-left: 57px;
+            @include responsive(777px){
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                margin-left: 10px;
+            }
+        }
         a:hover,
         a.current{
             text-decoration: underline;

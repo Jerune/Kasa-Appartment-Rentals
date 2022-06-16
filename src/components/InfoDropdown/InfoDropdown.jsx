@@ -21,7 +21,7 @@ export default function InfoDropdown({state, type, title, content}){
                     content.length === 5 ? 
                     <p className='rental-size'>
                         {content.map((element, index) => {
-                        return(<span>{element}</span>)
+                        return(<span key={index}>{element}</span>)
                         })}
                     </p>
                     : <p className='rental-size'>{content}</p> 

@@ -5,31 +5,60 @@
         flex-direction: row;
         justify-content: space-between;
         color: $color-primary;
+        @include responsive(777px){
+            flex-direction: column;
+        }
         h1{
             font-size: 2.25rem;
             line-height: 3.188rem;
+            @include responsive(777px){
+                font-size: 1.125rem;
+                line-height: 1.6;
+            }
         }
         h3{
             font-size: 1.125rem;
             line-height: 1.563rem;
+            @include responsive(777px){
+                font-size: 0.875rem;
+                line-height: 1.25;
+                padding-top: 5px;
+            }
         }
         &_tags{
             margin: 20px 0 25px 0;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            flex-wrap: wrap;
+            @include responsive(777px){
+                margin: 10px 0 0 0;
+            }
             li{
                 padding: 3px 40px 2px 40px;
-                margin-right: 10px;
+                margin: 0 10px 10px 0;
                 border-radius: 10px;
                 background-color: $color-primary;
                 color: white;
                 font-size: 0.875rem;
                 line-height: 1.25rem ;
+                @include responsive(777px){
+                    border-radius: 5px;
+                    font-size: 0.625rem;
+                    line-height: 1.42;
+                }
             }
         }
     }
     &_ownerRating{
+        @include responsive(777px){
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin: 6px 0 16px 0;
+        }
         &_owner{
             display: flex;
             flex-direction: row;
@@ -37,14 +66,24 @@
             align-items: center;
             h3{
                 font-size: 1.125rem;
-                line-height: 1.625rem;
+                line-height: 1.4;
                 padding-right: 10px;
+                display: inline-block;
+                text-align: right;
+                @include responsive(777px){
+                    font-size: 0.75rem;
+                    max-width: 115px;
+                }
             }
             img{
                 height: 64px;
                 width: 64px;
                 border-radius: 50%;
                 background-color: $color-secondary;
+                @include responsive(777px){
+                    height: 32px;
+                    width: 32px;
+                }
             }
         }
         &_rating{
@@ -53,8 +92,20 @@
             justify-content: flex-end;
             font-size: 1.5rem;
             margin-top: 20px;
+            @include responsive(777px){
+                order: -1;
+                font-size: 0.875rem;
+                margin-top: 0;
+                justify-content: flex-start;
+            }
             li{
                 margin-left: 10px;
+                @include responsive(777px){
+                    margin-left: 5px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
                 &.empty{
                     color: $color-stars;
                 }
@@ -68,10 +119,18 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include responsive(777px){
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
         > *{
             width: 47%;
             margin-top: 0;
             font-size: 1.125rem;
+            @include responsive(777px){
+                width: 100%;
+                margin-top: 20px;
+            }
         }
     }
 }

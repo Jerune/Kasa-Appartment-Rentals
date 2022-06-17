@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 415px;
     max-height: 415px;
@@ -11,25 +12,40 @@
     color: white;
     font-size: 5.3rem;
     margin-bottom: 30px;
+    @include responsive(1000px){
+        font-size: 3rem;
+    }
+    @include responsive(777px){
+        height: 255px;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
     img{
         width: 100%;
+        height: 100%;
         object-fit: cover;
         margin: 0 auto;
     }
     .left{
         position: absolute;
         left: 25px;
-        top: 40%;
+        @include responsive(550px){
+            left: 6px;
+        }
     }
     .right{
         position: absolute;
         right: 25px;
-        top: 40%;
+        @include responsive(550px){
+            right: 6px;
+        }
     }
     .photo-index{
         position: absolute;
-        right: 48%;
         bottom: 25px;
         font-size: 1.125rem;
+        @include responsive(777px){
+            display: none;
+        }
     }
 }

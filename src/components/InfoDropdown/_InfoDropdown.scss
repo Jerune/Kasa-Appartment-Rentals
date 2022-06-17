@@ -19,8 +19,11 @@
         padding: 6px 18px;
         height: 47px;
         color: white;
+        border-radius: 5px;
+        z-index: 100;
         @include responsive(777px){
-            height: 30px
+            height: 30px;
+            padding-left: 11px;
         }
         h2{
             font-size: 1.5rem;
@@ -37,6 +40,8 @@
         font-size: 1.5rem;
         line-height: 1.42;
         font-weight: 400;
+        margin-top: -5px;
+        height: 100%;
         @include responsive(777px){
             font-size: 0.75rem;
             padding: 18px 10px;

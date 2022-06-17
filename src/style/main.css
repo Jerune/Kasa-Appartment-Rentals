@@ -294,11 +294,14 @@ ul {
   padding: 6px 18px;
   height: 47px;
   color: white;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 @media screen and (max-width: 777px) {
   .info-dropdown div {
     height: 30px;
+    padding-left: 11px;
   }
 }
 
@@ -320,6 +323,8 @@ ul {
   font-size: 1.5rem;
   line-height: 1.42;
   font-weight: 400;
+  margin-top: -5px;
+  height: 100%;
 }
 
 @media screen and (max-width: 777px) {
@@ -355,6 +360,9 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 415px;
   max-height: 415px;
@@ -366,8 +374,23 @@ ul {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1000px) {
+  .gallery {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .gallery {
+    height: 255px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+}
+
 .gallery img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
@@ -376,20 +399,35 @@ ul {
 .gallery .left {
   position: absolute;
   left: 25px;
-  top: 40%;
+}
+
+@media screen and (max-width: 550px) {
+  .gallery .left {
+    left: 6px;
+  }
 }
 
 .gallery .right {
   position: absolute;
   right: 25px;
-  top: 40%;
+}
+
+@media screen and (max-width: 550px) {
+  .gallery .right {
+    right: 6px;
+  }
 }
 
 .gallery .photo-index {
   position: absolute;
-  right: 48%;
   bottom: 25px;
   font-size: 1.125rem;
+}
+
+@media screen and (max-width: 777px) {
+  .gallery .photo-index {
+    display: none;
+  }
 }
 
 .main {
@@ -474,14 +512,38 @@ ul {
   color: #FF6060;
 }
 
+@media screen and (max-width: 777px) {
+  .rentals_generalInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .rentals_generalInfo h1 {
   font-size: 2.25rem;
   line-height: 3.188rem;
 }
 
+@media screen and (max-width: 777px) {
+  .rentals_generalInfo h1 {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
 .rentals_generalInfo h3 {
   font-size: 1.125rem;
   line-height: 1.563rem;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_generalInfo h3 {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    padding-top: 5px;
+  }
 }
 
 .rentals_generalInfo_tags {
@@ -496,16 +558,52 @@ ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_generalInfo_tags {
+    margin: 10px 0 0 0;
+  }
 }
 
 .rentals_generalInfo_tags li {
   padding: 3px 40px 2px 40px;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   border-radius: 10px;
   background-color: #FF6060;
   color: white;
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_generalInfo_tags li {
+    border-radius: 5px;
+    font-size: 0.625rem;
+    line-height: 1.42;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_ownerRating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 6px 0 16px 0;
+  }
 }
 
 .rentals_ownerRating_owner {
@@ -526,8 +624,17 @@ ul {
 
 .rentals_ownerRating_owner h3 {
   font-size: 1.125rem;
-  line-height: 1.625rem;
+  line-height: 1.4;
   padding-right: 10px;
+  display: inline-block;
+  text-align: right;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_ownerRating_owner h3 {
+    font-size: 0.75rem;
+    max-width: 115px;
+  }
 }
 
 .rentals_ownerRating_owner img {
@@ -535,6 +642,13 @@ ul {
   width: 64px;
   border-radius: 50%;
   background-color: #F6F6F6;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_ownerRating_owner img {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .rentals_ownerRating_rating {
@@ -552,8 +666,31 @@ ul {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 777px) {
+  .rentals_ownerRating_rating {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    font-size: 0.875rem;
+    margin-top: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .rentals_ownerRating_rating li {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_ownerRating_rating li {
+    margin-left: 5px;
+  }
+}
+
+.rentals_ownerRating_rating li:first-child {
+  margin-left: 0;
 }
 
 .rentals_ownerRating_rating li.empty {
@@ -575,10 +712,27 @@ ul {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 777px) {
+  .rentals_detailInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
 .rentals_detailInfo > * {
   width: 47%;
   margin-top: 0;
   font-size: 1.125rem;
+}
+
+@media screen and (max-width: 777px) {
+  .rentals_detailInfo > * {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 .not-found {

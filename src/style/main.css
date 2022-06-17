@@ -604,10 +604,37 @@ ul {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 1000px) {
+  .not-found h1 {
+    font-size: 12rem;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .not-found h1 {
+    font-size: 6rem;
+    margin-top: 160px;
+  }
+}
+
 .not-found h2 {
   font-size: 2.25rem;
   font-weight: 500;
   margin-top: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .not-found h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .not-found h2 {
+    font-size: 1.125rem;
+    margin-top: 15px;
+  }
 }
 
 .not-found a {
@@ -615,5 +642,12 @@ ul {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 190px 0 160px 0;
+}
+
+@media screen and (max-width: 777px) {
+  .not-found a {
+    font-size: 0.875rem;
+    margin-top: 133px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -8,16 +8,35 @@
         font-size: 18rem;
         font-weight: 700;
         margin-top: 80px;
+        @include responsive(1000px){
+            font-size: 12rem;
+        }
+        @include responsive(777px){
+            font-size: 6rem;
+            margin-top: 160px;
+        }
     }
     h2{
         font-size: 2.25rem;
         font-weight: 500;
         margin-top: 25px;
+        text-align: center;
+        @include responsive(1000px){
+            font-size: 1.5rem;
+        }
+        @include responsive(777px){
+            font-size: 1.125rem;
+            margin-top: 15px;
+        }
     }
     a {
         text-decoration: underline;
         font-size: 1.125rem ;
         font-weight: 500;
         margin: 190px 0 160px 0;
+        @include responsive(777px){
+            font-size: 0.875rem;
+            margin-top: 133px;
+        }
     }
 }

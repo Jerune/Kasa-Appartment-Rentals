@@ -2,4 +2,7 @@
     margin: 33px 0 ;
     width: 100%;
     max-width: 1023px;
+    @include responsive(777px){
+        margin: 20px 0;
+    }
 }

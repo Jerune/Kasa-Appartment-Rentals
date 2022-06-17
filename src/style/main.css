@@ -266,6 +266,12 @@ ul {
   overflow: hidden;
 }
 
+@media screen and (max-width: 777px) {
+  .info-dropdown {
+    margin-top: 20px;
+  }
+}
+
 .info-dropdown:first-child {
   margin-top: 0;
 }
@@ -288,7 +294,12 @@ ul {
   padding: 6px 18px;
   height: 47px;
   color: white;
-  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 777px) {
+  .info-dropdown div {
+    height: 30px;
+  }
 }
 
 .info-dropdown div h2 {
@@ -296,16 +307,37 @@ ul {
   font-weight: 500;
 }
 
+@media screen and (max-width: 777px) {
+  .info-dropdown div h2 {
+    font-size: 0.813rem;
+  }
+}
+
 .info-dropdown p {
   background-color: #F6F6F6;
   padding: 30px 18px 20px 18px;
   color: #FF6060;
   font-size: 1.5rem;
+  line-height: 1.42;
   font-weight: 400;
+}
+
+@media screen and (max-width: 777px) {
+  .info-dropdown p {
+    font-size: 0.75rem;
+    padding: 18px 10px;
+  }
 }
 
 .info-dropdown p.rental-size {
   font-size: 1.125rem;
+}
+
+@media screen and (max-width: 777px) {
+  .info-dropdown p.rental-size {
+    font-size: 0.75rem;
+    padding: 18px 10px;
+  }
 }
 
 .info-dropdown p span {
@@ -419,6 +451,12 @@ ul {
   margin: 33px 0;
   width: 100%;
   max-width: 1023px;
+}
+
+@media screen and (max-width: 777px) {
+  .strengths {
+    margin: 20px 0;
+  }
 }
 
 .rentals_generalInfo {

@@ -4,6 +4,9 @@
     margin-top: 30px;
     border-radius: 5px;
     overflow: hidden;
+    @include responsive(777px){
+        margin-top: 20px;
+    }
     &:first-child{
         margin-top: 0;
     }
@@ -16,10 +19,15 @@
         padding: 6px 18px;
         height: 47px;
         color: white;
-        font-size: 1.5rem;
+        @include responsive(777px){
+            height: 30px
+        }
         h2{
             font-size: 1.5rem;
             font-weight: 500;
+            @include responsive(777px){
+                font-size: 0.813rem;
+            }
         } 
     }
     p{
@@ -27,9 +35,18 @@
         padding: 30px 18px 20px 18px;
         color: $color-primary;
         font-size: 1.5rem;
+        line-height: 1.42;
         font-weight: 400;
+        @include responsive(777px){
+            font-size: 0.75rem;
+            padding: 18px 10px;
+        }
         &.rental-size{
             font-size: 1.125rem;
+            @include responsive(777px){
+                font-size: 0.75rem;
+                padding: 18px 10px;
+            }
         }
         span{
             display: block;

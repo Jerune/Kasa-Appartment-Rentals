@@ -40,7 +40,7 @@ export default function Rentals(){
 
     return(
         <main className="main rentals">
-            <Gallery data={currentRental} />
+            <Gallery images={currentRental.pictures} />
             <div className='rentals_generalInfo'>
                 <div className="rentals_nameLocationTags">
                     <h1>{currentRental.title}</h1>

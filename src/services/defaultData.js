@@ -1,6 +1,16 @@
 const defaultData = {
-    logements : [],
-    currentLogement: {},
+    "id": "",
+		"title": "",
+		"cover": "",
+		"pictures": [],
+		"description": "",
+		"host": {},
+		"rating": "",
+		"location": "",
+		"equipments": [],
+		"tags": []
 };
 
-export default defaultData;
+export {
+    defaultData
+} 

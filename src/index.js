@@ -18,22 +18,19 @@ import NotFound from './pages/404/404';
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
 import "./style/main.css";
-// Providers
-import { StoreProvider } from './providers/Store';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <BrowserRouter>
       <Header />
-      <StoreProvider>
         <Routes>
           <Route index element={<Home />}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/rentals/:rentalId' element={<Rentals/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
-      </StoreProvider>
       </BrowserRouter>
     <Footer />
   </React.StrictMode>

@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
 import Gallery from "../../components/Gallery/Gallery";
 import Rating from '../../components/Rating/Rating';
+import { defaultData } from "../../services/defaultData";
 
 export default function Rentals(){
-    const [currentRental, setCurrentRental] = useState({})
+    const [currentRental, setCurrentRental] = useState(defaultData)
     const [isDataLoading, setDataLoading] = useState(true)  
     let params = useParams();
     

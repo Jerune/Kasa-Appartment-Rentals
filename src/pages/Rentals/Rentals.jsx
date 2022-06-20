@@ -18,7 +18,6 @@ export default function Rentals(){
            .then((result) => {
             if (result.some(logement => logement.id === params.rentalId)){
                 const thisRental = result.filter(logement => logement.id === params.rentalId)[0]
-                console.log(thisRental)
                 setCurrentRental(thisRental)
             } 
             setDataLoading(false)

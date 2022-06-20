@@ -29,9 +29,9 @@ export default function Home(){
         <main className="main">
             <HeroBanner page='Home'/>
             <section className="rental-overview">
-                {rentalsData.map((logement) => (
+                {rentalsData.map((logement, index) => (
                     <RentalCard 
-                    key={logement.id}
+                    key={index}
                     id={logement.id}
                     picture={logement.cover}
                     title={logement.title}

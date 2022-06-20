@@ -1,38 +1,13 @@
-/**
- * @typedef {Object}  storage
- * @property {Object}  get contains all data
- * @property {Function} set updates data in object
- */
-
 import {createContext, useState} from "react";
-import data from "../services/defaultData";
+import { getAllData } from "../services/dataManager";
+import defaultData from "../services/defaultData";
 
 const StoreContext = createContext(undefined);
 
-/**
- * @type {storage}
- */
-const store = {
-    get : {},
-    set : () => {}
-};
-
 function StoreProvider({children}){
-    const [get, set]= useState(data);
-    store.get = get;
-    store.set = update;
-
-    function update(newData){
-        set({
-            ...get,
-            ...newData
-        })
-    }
-
+    const [data, setData]= useState(defaultData);
     return (
-        <StoreContext.Provider 
-// @ts-ignore
-        value={[get, update]} >
+        <StoreContext.Provider value={{data, setData}} >
             {children}
         </StoreContext.Provider>
     )
@@ -40,6 +15,5 @@ function StoreProvider({children}){
 
 export {
     StoreContext, 
-    StoreProvider, 
-    store
+    StoreProvider
 }

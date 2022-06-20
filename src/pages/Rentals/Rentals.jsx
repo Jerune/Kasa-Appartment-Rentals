@@ -1,48 +1,69 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
-import { useContext } from 'react';
-import { getAllData } from '../../services/dataManager';
-import { StoreContext } from '../../providers/Store';
+import { useParams, Navigate } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
 import Gallery from "../../components/Gallery/Gallery";
 import Rating from '../../components/Rating/Rating';
-let selectedRental = {};
 
 export default function Rentals(){
-    // @ts-ignore
-    const [store] = useContext(StoreContext);
-    if(store.logements.length=== 0) getAllData();
-    let params = useParams();  
+    const [currentRental, setCurrentRental] = useState({})
+    const [isDataLoading, setDataLoading] = useState(true)  
+    let params = useParams();
     
-    if(store.logements.length > 1){
-        selectedRental = store.logements.filter(logement => logement.id === params.rentalId)
+    useEffect(() => {
+        setDataLoading(true)
+        fetch("/logements.json")
+           .then((response) => response.json()
+           .then((result) => {
+            const thisRental = result.filter(logement => logement.id === params.rentalId)[0]
+            setCurrentRental(thisRental)
+            setDataLoading(false)
+           })
+        )
+     }, [])
+
+     if (isDataLoading){
+        return(
+            <main className='main'>
+                <p className='loading'>Loading...</p>
+            </main>
+        )
+     }
+
+
+    //     if (store.currentLogement.id === undefined){
+    //         store.currentLogement = {}
+    //         return (<Navigate to="/404" />);
+    //     }
+    // }
 
     return(
         <main className="main rentals">
-            <Gallery data={selectedRental} />
+            <Gallery data={currentRental} />
             <div className='rentals_generalInfo'>
                 <div className="rentals_nameLocationTags">
-                    <h1>{selectedRental[0].title}</h1>
-                    <h3>{selectedRental[0].location}</h3>
+                    <h1>{currentRental.title}</h1>
+                    <h3>{currentRental.location}</h3>
                     <ul className="rentals_generalInfo_tags">
-                        {selectedRental[0].tags.map((tag) => <li key={tag}>{tag}</li>)}
+                        {currentRental.tags.map((tag) => <li key={tag}>{tag}</li>)}
                     </ul>
                 </div>
                 <div className="rentals_ownerRating">
                     <div className="rentals_ownerRating_owner">
-                        <h3>{selectedRental[0].host.name}</h3>
-                        <img src={selectedRental[0].host.picture} alt={selectedRental[0].host.name} />
+                        <h3>{currentRental.host.name}</h3>
+                        <img src={currentRental.host.picture} alt={currentRental.host.name} />
                     </div>
                     <ul className="rentals_ownerRating_rating">
-                        <Rating amountOfStars={selectedRental[0].rating}/>
+                        <Rating amountOfStars={currentRental.rating}/>
                     </ul>
                 </div>
             </div>
             <section className='rentals_detailInfo'>
-                <InfoDropdown state="open" type="rentals" title="Description" content={selectedRental[0].description}/>
-                <InfoDropdown state="open" type="rentals" title="Equipments" content={selectedRental[0].equipments}/>
+                <InfoDropdown state="open" type="rentals" title="Description" content={currentRental.description}/>
+                <InfoDropdown state="open" type="rentals" title="Equipments" content={currentRental.equipments}/>
             </section>
         </main>
-    )
-    }
+    ) 
+
+                
 }

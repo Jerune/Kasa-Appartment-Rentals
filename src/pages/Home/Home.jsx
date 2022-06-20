@@ -1,19 +1,34 @@
-import { useContext } from 'react';
+import { useState, useEffect } from 'react';
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
 import RentalCard from "../../components/RentalCard/RentalCard";
-import { getAllData } from '../../services/dataManager';
-import { StoreContext } from '../../providers/Store';
 
 export default function Home(){
-    // @ts-ignore
-    const [store] = useContext(StoreContext);
-    if(store.logements.length=== 0) getAllData();
+    const [dataIsLoading, setDataLoading] = useState(false)
+    const [rentalsData, setRentalsData] = useState([])
+    useEffect(() => {
+        setDataLoading(true)
+        fetch("/logements.json")
+           .then((response) => response.json()
+           .then((result) => {
+            setRentalsData(result)
+            setDataLoading(false)
+           })
+        )
+     }, [])
+
+    if (dataIsLoading){
+        return(
+            <main className='main'>
+                <p className='loading'>Loading...</p>
+            </main>
+        )
+    }
 
     return(
         <main className="main">
             <HeroBanner page='Home'/>
             <section className="rental-overview">
-                {store.logements.map((logement) => (
+                {rentalsData.map((logement) => (
                     <RentalCard 
                     key={logement.id}
                     id={logement.id}

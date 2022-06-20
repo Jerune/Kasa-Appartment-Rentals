@@ -5,6 +5,12 @@
     max-width: 1440px;
     padding: 0 100px;
     margin: 0 auto;
+    .loading{
+        font-size: 2rem;
+        color: $color-primary;
+        margin-bottom: 500px;
+        text-align: left;
+    }
     @include responsive(1030px){
         padding-left: 5%;
         padding-right: 5%;

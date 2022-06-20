@@ -446,6 +446,13 @@ ul {
   margin: 0 auto;
 }
 
+.main .loading {
+  font-size: 2rem;
+  color: #FF6060;
+  margin-bottom: 500px;
+  text-align: left;
+}
+
 @media screen and (max-width: 1030px) {
   .main {
     padding-left: 5%;

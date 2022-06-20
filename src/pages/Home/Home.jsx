@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
 import RentalCard from "../../components/RentalCard/RentalCard";
+import { defaultHomeData } from "../../services/defaultData";
 
 export default function Home(){
     const [dataIsLoading, setDataLoading] = useState(false)
-    const [rentalsData, setRentalsData] = useState([])
+    const [rentalsData, setRentalsData] = useState(defaultHomeData)
     useEffect(() => {
         setDataLoading(true)
         fetch("/logements.json")

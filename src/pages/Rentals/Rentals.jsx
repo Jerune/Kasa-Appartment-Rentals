@@ -16,8 +16,11 @@ export default function Rentals(){
         fetch("/logements.json")
            .then((response) => response.json()
            .then((result) => {
-            const thisRental = result.filter(logement => logement.id === params.rentalId)[0]
-            setCurrentRental(thisRental)
+            if (result.some(logement => logement.id === params.rentalId)){
+                const thisRental = result.filter(logement => logement.id === params.rentalId)[0]
+                console.log(thisRental)
+                setCurrentRental(thisRental)
+            } 
             setDataLoading(false)
            })
         )
@@ -32,11 +35,9 @@ export default function Rentals(){
      }
 
 
-    //     if (store.currentLogement.id === undefined){
-    //         store.currentLogement = {}
-    //         return (<Navigate to="/404" />);
-    //     }
-    // }
+    if (currentRental.id === ''){
+        return (<Navigate to="/404" />);
+    }
 
     return(
         <main className="main rentals">

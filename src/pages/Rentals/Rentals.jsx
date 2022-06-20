@@ -1,5 +1,6 @@
+import React from 'react';
+import { useParams } from "react-router-dom";
 import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
 import { getAllData } from '../../services/dataManager';
 import { StoreContext } from '../../providers/Store';
 import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";

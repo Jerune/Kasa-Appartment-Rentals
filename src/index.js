@@ -1,4 +1,3 @@
-// @ts-nocheck
 // React
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -18,13 +17,15 @@ import NotFound from './pages/404/404';
 import reportWebVitals from './reportWebVitals';
 import "./style/fonts.css";
 import "./style/main.css";
+// Providers
 import { StoreProvider } from './providers/Store';
+let path = window.location.pathname;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-      <Header />
+      <Header url={path}/>
       <StoreProvider>
         <Routes>
           <Route index element={<Home />}/>

@@ -7,4 +7,4 @@ export default function Footer(){
             <span className="copyright">&copy; 2022 Kasa. All rights reserved</span>
         </footer>
     )
-}
+}   

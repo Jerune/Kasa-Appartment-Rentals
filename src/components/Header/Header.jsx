@@ -5,7 +5,7 @@ import logo from "../../assets/general/logo.png";
 export default function Header(){  
     return(
         <header className="header">
-            <NavLink to="/" >
+            <NavLink to="/">
                 <img src={logo} alt="Kasa-logo" />
             </NavLink>
             <nav> 

@@ -22,6 +22,7 @@ export default function Rentals(){
             } 
             setDataLoading(false)
            })
+           .catch(err => console.log(err))
         )
      }, [])
 

@@ -14,6 +14,7 @@ export default function Home(){
             setRentalsData(result)
             setDataLoading(false)
            })
+           .catch(err => console.log(err))
         )
      }, [])
 

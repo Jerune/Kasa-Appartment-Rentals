@@ -9,7 +9,7 @@
         font-size: 2rem;
         color: $color-primary;
         margin-bottom: 500px;
-        text-align: left;
+        text-align: left; 
     }
     @include responsive(1030px){
         padding-left: 5%;

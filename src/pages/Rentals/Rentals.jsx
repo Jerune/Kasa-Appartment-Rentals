@@ -67,7 +67,7 @@ export default function Rentals() {
           </ul>
         </div>
       </div>
-      <section className="rentals_detailInfo">
+      <div className="rentals_detailInfo">
         <InfoDropdown
           state="open"
           type="rentals"
@@ -80,7 +80,7 @@ export default function Rentals() {
           title="Equipments"
           content={currentRental.equipments}
         />
-      </section>
+      </div>
     </main>
   );
 }

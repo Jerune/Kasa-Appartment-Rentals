@@ -27,7 +27,7 @@ export default function Rentals() {
         })
         .catch((err) => console.log(err))
     );
-  }, []);
+  }, [params]);
 
   if (isDataLoading) {
     return (

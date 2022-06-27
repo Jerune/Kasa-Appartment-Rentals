@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import HeroBanner from "../../components/HeroBanner/HeroBanner";
-import RentalCard from "../../components/RentalCard/RentalCard";
-import { defaultHomeData } from "../../services/defaultData";
+import HeroBanner from "components/HeroBanner/HeroBanner";
+import RentalCard from "components/RentalCard/RentalCard";
+import { defaultHomeData } from "services/defaultData";
 
 export default function Home() {
   const [dataIsLoading, setDataLoading] = useState(false);

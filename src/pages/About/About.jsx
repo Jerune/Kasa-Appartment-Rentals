@@ -1,5 +1,5 @@
-import HeroBanner from "../../components/HeroBanner/HeroBanner";
-import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
+import HeroBanner from "components/HeroBanner/HeroBanner";
+import InfoDropdown from "components/InfoDropdown/InfoDropdown";
 
 export default function About() {
   return (

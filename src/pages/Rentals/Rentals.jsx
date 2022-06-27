@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import InfoDropdown from "../../components/InfoDropdown/InfoDropdown";
-import Gallery from "../../components/Gallery/Gallery";
-import Rating from "../../components/Rating/Rating";
-import { defaultRentalData } from "../../services/defaultData";
+import InfoDropdown from "components/InfoDropdown/InfoDropdown";
+import Gallery from "components/Gallery/Gallery";
+import Rating from "components/Rating/Rating";
+import { defaultRentalData } from "services/defaultData";
 
 export default function Rentals() {
   const [currentRental, setCurrentRental] = useState(defaultRentalData);
